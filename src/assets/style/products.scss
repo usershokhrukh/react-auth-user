@@ -1,0 +1,56 @@
+@import "./mixin.scss";
+
+.products {
+  @include display();
+  flex-direction: column;
+  margin-top: 50px;
+  gap: 50px;
+  &__top {
+    @include display();
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.04em;
+
+    /* Text2 */
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &__top-right {
+    @include display();
+    gap: 10px;
+  }
+
+  &__top-svg {
+    width: 30px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color: rgb(236, 236, 236);
+  }
+
+  &__bottom {
+    @include display();
+    gap: 30px;
+    overflow: auto;
+    justify-content: start;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

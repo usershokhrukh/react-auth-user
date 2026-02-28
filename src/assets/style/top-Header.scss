@@ -1,0 +1,5 @@
+@import "./mixin.scss";
+.top-header{
+  @include display();
+  justify-content: space-between;
+}

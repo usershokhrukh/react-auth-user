@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "../assets/style/top-Header.scss"
 const TopHeader = () => {
   return (
-    <div className='top-header'>
+    <div className='top-header container'>
       <div className='top-header__left'>
         <p className='top-header__text'>
           Shahar:Toshkent

@@ -10,10 +10,13 @@ import AllProducts from './componenets/AllProducts'
 import Footer from './componenets/Footer'
 import Deliver from './componenets/Deliver'
 import "./assets/style/general.scss"
+import "./assets/style/main.scss"
+import "./assets/style/mixin.scss"
+import "./assets/style/fonts.css"
 
 const App = () => {
   return (
-    <div>
+    <div className='main__wrapper wrapper'>
       <TopHeader/>
       <Navbar/>
       <Intro/>

@@ -1,0 +1,210 @@
+@import "./mixin.scss";
+
+.newPrices {
+  @include display();
+  flex-direction: column;
+  gap: 70px;
+  &__top {
+    @include display();
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: end;
+  }
+
+  &__title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.04em;
+
+    /* Text2 */
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &__left {
+    @include display();
+    justify-content: start;
+    gap: 30px;
+    // width: 100%;
+    flex-grow: 1;
+    flex-wrap: wrap;
+  }
+
+  &__svg {
+    width: 30px;
+    padding: 5px;
+    background-color: rgb(233, 232, 232);
+    border-radius: 50px;
+  }
+
+  &__time-box {
+    @include display();
+    gap: 10px;
+  }
+
+  &__right {
+    @include display();
+    gap: 10px;
+  }
+
+  &__bottom {
+    @include display();
+    // flex-wrap: wrap;
+    overflow: auto;
+    justify-content: space-between;
+    justify-content: start;
+    width: 100%;
+    gap: 30px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__boxes {
+    @include display();
+    flex-direction: column;
+    gap: 20px;
+    // background-color: red
+  }
+  &__boxes-top {
+    @include display();
+    width: 100%;
+    position: relative;
+    padding: 50px 50px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 8px;
+  }
+
+  &__boxes-img {
+    width: 170px;
+  }
+
+  &__boxes-top-box {
+    @include display();
+    width: calc(100% - 20px);
+    position: absolute;
+    justify-content: space-between;
+    align-items: start;
+    top: 10px;
+  }
+
+  &__top-box-svg {
+    width: 30px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+  }
+
+  &__top-box-sale {
+    background-color: rgb(211, 27, 27);
+    padding: 3px 8px;
+    border-radius: 4px;
+    /* Title/12PX Regular */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    /* Text */
+    color: #fafafa;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &__top-box-right {
+    @include display();
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__boxes-bottom {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    gap: 10px;
+  }
+
+  &__boxes-title {
+    /* HAVIT HV-G92 Gamepad */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  &__boxes-price-box {
+    @include display();
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__boxes-prices {
+    @include display();
+    gap: 8px;
+  }
+
+  &__boxes-origin-price {
+    /* Title/16PX Medium */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Secondary 2 */
+    color: #db4444;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &__boxes-origin-price-del {
+    color: gray !important;
+    text-decoration: line-through;
+  }
+
+  &__boxes-button {
+    @include hoverCursor;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: #00a3ff;
+    color: white;
+  }
+
+  &__bot-button {
+    @include hoverCursor;
+    border: none;
+    padding: 18px 60px;
+    border-radius: 10px;
+    background-color: #00a3ff;
+    color: white;
+  }
+}

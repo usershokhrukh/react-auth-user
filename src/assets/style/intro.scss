@@ -1,0 +1,72 @@
+@import "./mixin.scss";
+.intro {
+  @include display();
+  position: relative;
+  padding: 100px;
+  border-radius: 30px;
+  background: url("../images/intro-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // flex-wrap: wrap;
+  &__left {
+    @include display();
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    width: 50%;
+  }
+
+  &__left-title {
+    width: 100%;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height */
+
+    color: #000000;
+  }
+
+  &__left-subtext {
+
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+    color: #9a9a9a;
+  }
+
+  &__left-button {
+    border: none;
+
+    padding: 10px 20px;
+    border-radius: 13px;
+    background-color: #00A3FF;
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__right {    
+    position: relative;
+  }
+
+  &__right-img-top {
+    // top: -25px;
+    right: 0px;
+    position: absolute;
+    // width: 100%;
+    min-width: 60px;
+    height: 100%;
+  }
+
+  &__right-img-bottom {
+    z-index: 3;
+    position: relative;
+    width: 100%;
+  }
+}

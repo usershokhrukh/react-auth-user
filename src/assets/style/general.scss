@@ -1,3 +1,27 @@
+@import "./mixin.scss";
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 svg {
   max-width: 100px;
+}
+
+.wrapper {
+  @include display();
+  flex-direction: column;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1700px;
+  padding: 30px 2%;
+}
+
+li {
+  list-style: none;
 }

@@ -1,0 +1,104 @@
+@import "./mixin.scss";
+.navbar {
+  @include display();
+  margin-top: 20px;
+  // gap: 150px;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+
+  &__title {
+    /* Heading/24PX Bold */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+    letter-spacing: 0.03em;
+
+    /* Text2 */
+    color: #000000;
+  }
+  &__list {
+    @include display();
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: start;
+  }
+  &__link {
+    /* Title/16PX Regular */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+
+    /* Text2 */
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    &:hover {
+      color: #00a3ff;
+    }
+  }
+
+  &__right {
+    @include display();
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: end;
+  }
+  &__form {
+    position: relative;
+    @include display();
+    flex-grow: 1;
+  }
+  &__form-box {
+    position: relative;
+    width: 100%;
+  }
+
+  &__form-svg {
+    position: absolute;
+    top: 7px;
+    right: 15px;
+    width: 22px;
+  }
+
+  &__input {
+    border: none;
+    background-color: #f5f5f5;
+    font-family: "Poppins";
+    padding: 10px 80px 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+  }
+
+  &__button {
+    border: none;
+    padding: 10px;
+    background-color: #00a3ff;
+    border-radius: 5px;
+    color: white !important;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__span {
+    @include display();
+    gap: 10px;
+    font-family: "Poppins";
+    flex-wrap: wrap;
+  }
+  &__button-svg {
+    width: 20px;
+  }
+}

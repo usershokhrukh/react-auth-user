@@ -1,0 +1,59 @@
+@import "./mixin.scss";
+
+.allProducts {
+  @include display();
+
+  flex-direction: column;
+  gap: 40px;
+  &__top-box-new {
+    padding: 4px 8px;
+
+    /* Title/12PX Regular */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+    text-transform: uppercase;
+    color: #ffffff;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background-color: rgb(12, 204, 12);
+    border-radius: 5px;
+  }
+
+  &__bottom {
+    @include display();
+    gap: 30px;
+    // overflow: auto;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__button {
+    @include hoverCursor;
+    border: none;
+    padding: 18px 60px;
+    border-radius: 10px;
+    background-color: #00a3ff;
+    color: white;
+  }
+
+  &__stars-box {
+    @include display();
+  }
+
+  &__star {
+    width: 17px;
+    color: #FFAD33;
+  }
+}
