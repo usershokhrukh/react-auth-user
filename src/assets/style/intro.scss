@@ -2,12 +2,37 @@
 .intro {
   @include display();
   position: relative;
-  padding: 100px;
+  padding: 0px !important;
   border-radius: 30px;
   background: url("../images/intro-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  justify-content: space-between;
+  overflow: auto;
   // flex-wrap: wrap;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  @keyframes spin {
+    from {translate: 0;}
+    to{translate: -100%;}
+  }
+
+  &__main {
+    @include display();
+    float: 0 0 5em;
+    position: relative;
+    padding: 100px;
+    border-radius: 30px;
+   min-width: 100%;
+   animation: spin 7s linear infinite 5s;
+
+   & img {
+    position: relative;
+    right: -90px;
+   }
+  }
   &__left {
     @include display();
     flex-direction: column;
@@ -29,7 +54,6 @@
   }
 
   &__left-subtext {
-
     font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
@@ -44,14 +68,14 @@
 
     padding: 10px 20px;
     border-radius: 13px;
-    background-color: #00A3FF;
+    background-color: #00a3ff;
     color: white;
     &:hover {
       cursor: pointer;
     }
   }
 
-  &__right {    
+  &__right {
     position: relative;
   }
 

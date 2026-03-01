@@ -1,37 +1,48 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
-import { toast } from "react-toastify";
-const Render = ({status}) => {
-  console.log(status);
-  async function  getRequest(url){
+import {toast} from "react-toastify";
+import RenderProducts from "./RenderProducts";
+const Render = ({status}) => {  
+  async function getRequest(url) {
     const request = await axios.get(url);
     return request;
   }
   try {
+    const [renderData, setData] = useState([]);
     const api = "https://fakestoreapi.com/products";
-    function getResponse(url){
-      const responseData = getRequest(url).then(response => renderProducts(response)).catch(error => toast.error("Something went wrong!", {
-        autoClose: 2000,
-      }))
-    }
-    function renderProducts(response) {
-      console.log(response);
-      const data = JSON.stringify(response);
-      localStorage.setItem("products", data);
-      
-    }
 
-    if(localStorage.getItem("products")) {
-      const data = JSON.parse(localStorage.getItem("products"));
-      renderProducts(data);
-    }else {
-      getResponse(api)
-    }
+    useEffect(() => {
+      function getResponse(url) {
+        try {
+          const responseData = getRequest(url)
+            .then((response) => {
+              localStorage.setItem("products", JSON.stringify(response?.data));
+              setData(response?.data);
+            })
+            .catch((error) =>
+              toast.error("Something went wrong!", {
+                autoClose: 2000,
+              }),
+            );
+        } catch (error) {
+          throw new Error("Something went wrong!");
+        }
+      }
+
+      const getProducts = localStorage.getItem("products");
+
+      if (getProducts) {
+        setData(JSON.parse(getProducts));
+      } else {
+        getResponse(api);
+      }
+    }, [status]);
+
     return (
-        <>
-          rendera
-        </>
-      );
+      <>
+        <RenderProducts data={renderData} status={status} />
+      </>
+    );
   } catch (error) {
     throw new Error(error);
   }

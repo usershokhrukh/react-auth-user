@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import "../assets/style/all-products.scss";
 import "../assets/style/new-Prices.scss";
 import boxesImgLap from "../assets/images/boxes-img-lap.png";
@@ -6,9 +6,22 @@ import Render from "./Render";
 const AllProducts = () => {
   try {
     const [status, setStatus] = useState({
-          location: "AllProducts",
-          amount: 20,
-        });
+      location: "AllProducts",
+      amount: 9,
+    });
+    const [amount, setAmount] = useState(8);
+    useEffect(() => {
+      setStatus({...status, amount});
+    }, [amount]);
+    const [button, setButton] = useState(true);
+    const handleClick = () => {
+      if (button) {
+        setAmount(20);
+      } else {
+        setAmount(8);
+      }
+      setButton(!button);
+    };
     return (
       <div className="allProducts container">
         <div className="products__top">
@@ -109,7 +122,7 @@ const AllProducts = () => {
               </div>
             </div>
           </div>
-          <div className="newPrices__boxes">
+          {/* <div className="newPrices__boxes">
             <div className="newPrices__boxes-top">
               <div className="newPrices__boxes-top-box">
                 <p className="allProducts__top-box-new">new</p>
@@ -488,10 +501,10 @@ const AllProducts = () => {
                 </span>
               </div>
             </div>
-          </div>
-          <Render status={status}/>
+          </div> */}
+          <Render status={status} />
         </div>
-        <button className="allProducts__button">Barchasini ko’rish</button>
+        <button onClick={handleClick} className="allProducts__button">{button ? "Barcha ko'rish" : "Yopish"}</button>
       </div>
     );
   } catch (error) {

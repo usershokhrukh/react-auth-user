@@ -17,16 +17,16 @@ import "./assets/style/fonts.css"
 const App = () => {
   return (
     <div className='main__wrapper wrapper'>
-      <TopHeader/>
+      {/* <TopHeader/> */}
       <Navbar/>
       <Intro/>
       <Catalog/>
       <NewPrices/>
       <Products/>
-      <NewProducts/>
+      {/* <NewProducts/> */}
       <AllProducts/>
-      <Deliver/>
-      <Footer/>
+      {/* <Deliver/> */}
+      {/* <Footer/> */}
     </div>
   )
 }

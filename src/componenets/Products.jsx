@@ -77,7 +77,7 @@ const Products = () => {
               </div>
             </div>
           </div>
-          <div className="newPrices__boxes">
+          {/* <div className="newPrices__boxes">
             <div className="newPrices__boxes-top">
               <div className="newPrices__boxes-top-box">
                 <p className="newPrices__top-box-sale">-35%</p>
@@ -208,7 +208,7 @@ const Products = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
           <Render status={status}/>
         </div>
       </div>

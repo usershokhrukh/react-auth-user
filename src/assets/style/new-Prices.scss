@@ -58,13 +58,25 @@
 
   &__bottom {
     @include display();
-    // flex-wrap: wrap;
-    overflow: auto;
+    flex-wrap: wrap;
+    // overflow: auto;
     justify-content: space-between;
-    justify-content: start;
+    justify-content: center;
+    // align-items: center;
     width: 100%;
-    gap: 30px;
+    // gap: 30px;
+    // height: 450px;
+    // background-color: red;
+    // background-color: red;
+  }
 
+  &__container {
+    @include display();
+    align-items: start;
+    gap: 30px;
+    // height: 350px;
+    flex-wrap: wrap;
+    justify-content: center;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -73,8 +85,9 @@
   &__boxes {
     @include display();
     flex-direction: column;
+    justify-content: start;
     gap: 20px;
-    // background-color: red
+    width: 300px;
   }
   &__boxes-top {
     @include display();
@@ -83,6 +96,7 @@
     padding: 50px 50px;
     background-color: rgb(230, 230, 230);
     border-radius: 8px;
+    height: 250px;
   }
 
   &__boxes-img {
@@ -206,5 +220,13 @@
     border-radius: 10px;
     background-color: #00a3ff;
     color: white;
+  }
+
+  @media (max-width: 500px) {
+    &__container {
+      flex-wrap: nowrap;
+      overflow: auto;
+      justify-content: space-between;
+    }
   }
 }

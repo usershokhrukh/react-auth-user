@@ -45,12 +45,22 @@
   &__bottom {
     @include display();
     gap: 30px;
-    overflow: auto;
+    flex-wrap: wrap;
+    // overflow: auto;
     justify-content: start;
+    align-items: start;
     width: 100%;
 
     &::-webkit-scrollbar {
       display: none;
+    }
+  }
+
+   @media (max-width: 500px) {
+    &__bottom {
+      flex-wrap: nowrap;
+      overflow: auto;
+      justify-content: space-between;
     }
   }
 }
