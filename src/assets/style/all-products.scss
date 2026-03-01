@@ -26,6 +26,13 @@
     border-radius: 5px;
   }
 
+  &__rate {
+    @include display();
+    gap: 2px;
+    font-family: "Poppins";
+     color: #FFAD33;
+  }
+
   &__bottom {
     @include display();
     gap: 30px;
