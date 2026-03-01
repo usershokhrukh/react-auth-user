@@ -222,6 +222,57 @@
     color: white;
   }
 
+  &__time-box {
+    @include display();
+  }
+
+  &__time-sp {
+    color: red
+  }
+
+  &__times {
+    @include display();
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__time-t {
+    /* Title/12PX Medium */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  &__time-main {
+    /* Heading/32PX Bold */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+    /* identical to box height, or 94% */
+    letter-spacing: 0.04em;
+
+    /* Text2 */
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+
   @media (max-width: 500px) {
     &__container {
       flex-wrap: nowrap;

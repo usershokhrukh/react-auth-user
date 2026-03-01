@@ -31,22 +31,22 @@ const NewPrices = () => {
             <div className="newPrices__time-box">
               <div className="newPrices__times">
                 <p className="newPrices__time-t">Days</p>
-                <h3 className="newPrices__time-main">03</h3>
+                <h3 className="newPrices__time-main">01</h3>
               </div>
               <span className="newPrices__time-sp">:</span>
               <div className="newPrices__times">
-                <p className="newPrices__time-t">Days</p>
-                <h3 className="newPrices__time-main">03</h3>
+                <p className="newPrices__time-t">Hours</p>
+                <h3 className="newPrices__time-main">16</h3>
               </div>
               <span className="newPrices__time-sp">:</span>
               <div className="newPrices__times">
-                <p className="newPrices__time-t">Days</p>
-                <h3 className="newPrices__time-main">03</h3>
+                <p className="newPrices__time-t">Minutes</p>
+                <h3 className="newPrices__time-main">37</h3>
               </div>
               <span className="newPrices__time-sp">:</span>
               <div className="newPrices__times">
-                <p className="newPrices__time-t">Days</p>
-                <h3 className="newPrices__time-main">03</h3>
+                <p className="newPrices__time-t">Seconds</p>
+                <h3 className="newPrices__time-main">17</h3>
               </div>
             </div>
           </div>

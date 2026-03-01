@@ -14,10 +14,11 @@ import "./assets/style/main.scss"
 import "./assets/style/mixin.scss"
 import "./assets/style/fonts.css"
 
+
 const App = () => {
   return (
     <div className='main__wrapper wrapper'>
-      {/* <TopHeader/> */}
+      <TopHeader/>
       <Navbar/>
       <Intro/>
       <Catalog/>

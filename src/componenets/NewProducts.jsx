@@ -1,8 +1,8 @@
 import React from 'react'
-
+import "../assets/style/new-products.scss"
 const NewProducts = () => {
   return (
-    <div className='newProduct'>
+    <div className='newProduct container'>
       <h2 className='newProduct__title'>
         Yangi mahsulotlar
       </h2>

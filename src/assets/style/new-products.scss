@@ -1,0 +1,23 @@
+@import "./mixin.scss";
+
+.newProduct {
+
+  &__title {
+    /* Heading/36PX SemiBold */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height, or 133% */
+    letter-spacing: 0.04em;
+
+    /* Text2 */
+    color: #000000;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+}

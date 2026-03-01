@@ -1,5 +1,40 @@
 @import "./mixin.scss";
-.top-header{
+.top-header {
   @include display();
-  justify-content: space-between;
+  justify-content: center;
+  background-color: black;
+  width: 100%;
+  &__container {
+    @include display();
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    /* Title/14PX Regular */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height, or 150% */
+
+    color: #ffffff;
+
+    /* Inside auto layout */
+    // flex: none;
+    // flex-grow: 0;
+    word-break: break-all;
+  }
+
+  &__select {
+    border: 1px solid white;
+    padding: 5px;
+    background-color: transparent ;
+    color: white;
+    font-family: "Poppins";
+    border-radius: 5px;
+  }
+  // padding: 30px;
 }
